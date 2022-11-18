@@ -11,16 +11,17 @@
   <remote fetch="https://github.com/ruslo" name="polly" />
   <remote fetch="https://github.com/zeromq" name="zeromq" />
   <remote fetch="https://git.savannah.gnu.org/git/" name="lwip"/>
+  <remote fetch="https://github.com/andybui01" name="andyb" />
 
   <default revision="master" remote="seL4"/>
 
   <project name="camkes-tool.git" path="projects/camkes-tool">
     <linkfile dest="camkes_README.md" src="docs/index.md"/>
   </project>
-  <project name="camkes-vm.git" path="projects/vm">
+  <project name="camkes-vm.git" path="projects/vm" remote="andyb" revision="andyb/x86_vmm">
     <linkfile dest="README.md" src="README.md"/>
   </project>
-  <project name="camkes-vm-examples.git" path="projects/vm-examples">
+  <project name="camkes-vm-examples.git" path="projects/vm-examples" remote="andyb" revision="andyb/supermicro_msi">
     <linkfile dest="easy-settings.cmake" src="easy-settings.cmake"/>
   </project>
   <project name="camkes-vm-images.git" path="projects/camkes-vm-images"/>
@@ -37,8 +38,8 @@
   </project>
   <project name="util_libs.git" path="projects/util_libs"/>
   <project name="projects_libs.git" path="projects/projects_libs"/>
-  <project name="camkes-vm-linux.git" path="projects/vm-linux"/>
-  <project name="seL4_projects_libs.git" path="projects/seL4_projects_libs"/>
+  <project name="camkes-vm-linux.git" path="projects/vm-linux" remote="andyb" revision="andyb/x86_vmm"/>
+  <project name="seL4_projects_libs.git" path="projects/seL4_projects_libs" remote="andyb" revision="andyb/x86_vmm"/>
   <project name="polly" remote="polly" path="tools/polly" />
   <project name="libzmq" remote="zeromq" path="projects/libzmq" revision="refs/tags/v4.2.5" />
   <project name="lwip.git" path="projects/lwip" remote="lwip" revision="refs/tags/STABLE-2_1_2_RELEASE"/>
